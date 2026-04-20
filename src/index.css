@@ -31,6 +31,38 @@ header .airport-tag {
   border-radius: 6px; padding: 6px 14px; font-size: 13px; color: #cbd5e1;
 }
 header .airport-tag strong { color: white; }
+.header-right { display: flex; align-items: center; gap: 12px; }
+
+/* ── EXPORT BUTTON ── */
+.export-wrapper { position: relative; }
+.export-btn {
+  background: var(--accent); color: white; border: none;
+  padding: 8px 16px; border-radius: 7px; font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: background 0.15s; white-space: nowrap;
+}
+.export-btn:hover:not(:disabled) { background: #4f46e5; }
+.export-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.export-backdrop { position: fixed; inset: 0; z-index: 9; }
+.export-dropdown {
+  position: absolute; right: 0; top: calc(100% + 8px);
+  background: white; border: 1px solid var(--border); border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12); width: 260px; z-index: 10;
+  overflow: hidden;
+}
+.export-dropdown-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); padding: 10px 14px 6px;
+}
+.export-option {
+  width: 100%; text-align: left; background: none; border: none;
+  padding: 10px 14px; cursor: pointer; border-top: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.export-option:hover { background: var(--light); }
+.export-option-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px; }
+.export-option-label { font-size: 13px; font-weight: 700; color: var(--navy); }
+.export-option-pages { font-size: 11px; color: var(--muted); }
+.export-option-desc { font-size: 11px; color: var(--muted); }
 
 /* ── HERO ── */
 .hero {
