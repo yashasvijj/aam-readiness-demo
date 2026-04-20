@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import LandingPage from './components/LandingPage';
+import UploadGate from './components/UploadGate';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import StatsBar from './components/StatsBar';
@@ -10,10 +13,21 @@ import ResourceScaling from './components/ResourceScaling';
 import StrategicCards from './components/StrategicCards';
 import Footer from './components/Footer';
 
+// Three views: 'landing' → 'upload' → 'dashboard'
 export default function App() {
+  const [view, setView] = useState('landing');
+
+  if (view === 'landing') {
+    return <LandingPage onEnter={() => setView('upload')} />;
+  }
+
+  if (view === 'upload') {
+    return <UploadGate onSubmit={() => setView('dashboard')} />;
+  }
+
   return (
     <>
-      <Header />
+      <Header onHome={() => setView('landing')} />
       <Hero />
       <StatsBar />
       <main>
