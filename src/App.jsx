@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import LandingPage from './components/LandingPage';
 import UploadGate from './components/UploadGate';
+import LoadingScreen from './components/LoadingScreen';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import StatsBar from './components/StatsBar';
@@ -13,7 +14,7 @@ import ResourceScaling from './components/ResourceScaling';
 import StrategicCards from './components/StrategicCards';
 import Footer from './components/Footer';
 
-// Three views: 'landing' → 'upload' → 'dashboard'
+// Four views: 'landing' → 'upload' → 'loading' → 'dashboard'
 export default function App() {
   const [view, setView] = useState('landing');
 
@@ -22,7 +23,11 @@ export default function App() {
   }
 
   if (view === 'upload') {
-    return <UploadGate onSubmit={() => setView('dashboard')} />;
+    return <UploadGate onSubmit={() => setView('loading')} />;
+  }
+
+  if (view === 'loading') {
+    return <LoadingScreen onDone={() => setView('dashboard')} />;
   }
 
   return (

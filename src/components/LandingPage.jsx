@@ -10,7 +10,7 @@ const STEPS = [
     color: '#6366f1',
     bg: '#ede9fe',
     title: 'Upload operational data',
-    body: 'Import a Virtower CSV export alongside basic airport identifiers — ICAO code, county, utility provider. No manual data entry required.',
+    body: 'Import an Airport Operations CSV export alongside basic airport identifiers — ICAO code, county, utility provider. No manual data entry required.',
     tag: 'Data Ingestion',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
@@ -25,7 +25,7 @@ const STEPS = [
     color: '#0ea5e9',
     bg: '#e0f2fe',
     title: 'Analyze the operational baseline',
-    body: 'Decompose 22+ months of Virtower records into aircraft-category mix, helicopter operations, hour-of-day patterns, and seasonal baselines.',
+    body: 'Decompose 22+ months of Airport Operations records into aircraft-category mix, helicopter operations, hour-of-day patterns, and seasonal baselines.',
     tag: 'Pattern Analysis',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
@@ -128,7 +128,7 @@ export default function LandingPage({ onEnter }) {
             for the eVTOL era.
           </h1>
           <p className="lp-hero-sub">
-            Upload a Virtower data export. Get a FAA-grade readiness score, a 90-day
+            Upload Airport Operations data export. Get a FAA-grade readiness score, a 90-day
             simulation across 9 infrastructure scenarios, and a grant-ready PDF report —
             in minutes.
           </p>
@@ -151,17 +151,17 @@ export default function LandingPage({ onEnter }) {
                     strokeLinecap="round" strokeDasharray="169.6" strokeDashoffset="12"
                     transform="rotate(-90 32 32)" />
                 </svg>
-                <span className="lp-preview-num">93</span>
+                <span className="lp-preview-num">98</span>
               </div>
               <div>
                 <div className="lp-preview-label">Readiness Index</div>
-                <div className="lp-preview-sublabel">Keystone Heights · 42J · OPTIMAL</div>
+                <div className="lp-preview-sublabel">Tampa International Airport · TPA · OPTIMAL</div>
               </div>
             </div>
             <div className="lp-preview-pills">
-              <div className="lp-preview-pill lp-pill-green">Gate 1 PASS</div>
+              <div className="lp-preview-pill lp-pill-green">Gate 1 PASS*</div>
               <div className="lp-preview-pill lp-pill-amber">Gate 2 PASS*</div>
-              <div className="lp-preview-pill lp-pill-blue">5 / 9 scenarios ready</div>
+              <div className="lp-preview-pill lp-pill-blue">9 / 9 scenarios ready</div>
             </div>
           </div>
         </div>
@@ -284,7 +284,7 @@ export default function LandingPage({ onEnter }) {
         <div className="lp-cta-inner">
           <h2 className="lp-cta-h2">See a real assessment in action.</h2>
           <p className="lp-cta-sub">
-            Explore the Keystone Heights Airport (42J) demo — all charts, all gate checks,
+            Explore the Airport Demo — all charts, all gate checks,
             all three report tiers, live in your browser.
           </p>
           <button className="lp-btn-primary lp-btn-lg" onClick={onEnter}>
@@ -298,7 +298,7 @@ export default function LandingPage({ onEnter }) {
         <span className="lp-logo-dim">AAM</span>
         <span className="lp-logo-bright"> Readiness System</span>
         <span className="lp-footer-sep">·</span>
-        <span className="lp-footer-note">Demo — Keystone Heights Airport (42J) · April 2026</span>
+        <span className="lp-footer-note">Demo - April 2026</span>
       </footer>
     </div>
   );

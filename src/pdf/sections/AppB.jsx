@@ -11,7 +11,7 @@ const SIM_STEPS = [
     title: 'Traffic Arrival Generation',
     bullets: [
       'Stochastic arrival events are generated for each 90-day simulation run using a non-homogeneous Poisson process calibrated to 42J\'s observed daily operations distribution.',
-      'Seasonal demand factors (monthly multipliers derived from Virtower data) are applied to modulate inter-arrival times across the simulation window.',
+      'Seasonal demand factors (monthly multipliers derived from Airport Operations data) are applied to modulate inter-arrival times across the simulation window.',
       'eVTOL arrivals are injected at the modelled adoption rate for each traffic tier, proportional to the corridor demand shares from the route network model.',
     ],
   },
@@ -78,7 +78,7 @@ export default function AppB({ tier }) {
             ['Traffic tiers',        'Low (0.8%), Medium (2.5%), High (5.8%) market adoption'],
             ['Infrastructure tiers', 'Vertistop (2 pads), Vertiport (4 pads), Vertihub (8 pads)'],
             ['Key outputs',           'Throughput rate, average TAT, peak queue depth, resiliency score'],
-            ['Calibration source',    'Virtower AI Tower System — 42J Operations Data (May 2024–March 2026)'],
+            ['Calibration source',    'Airport Operations — 42J Operations Data (May 2024–March 2026)'],
             ['Regulatory alignment',  'FAA EB-105; FAA AC 150/5325-4B resiliency framework'],
           ]}
           caption="Table B-1. Simulation Configuration Parameters. Source: AAM Readiness System simulation engine."

@@ -91,7 +91,7 @@ export const AIRPORT = {
 // BASELINE OPERATIONS
 // ─────────────────────────────────────────────────────────────────────────────
 export const OPS = {
-  source:         'Virtower AI Tower System — 42J Operations Data',
+  source:         'Airport Operations — 42J Operations Data',
   periodStart:    'May 2024',
   periodEnd:      'March 2026',
   totalOps:       50236,
@@ -756,7 +756,7 @@ export const REGULATORY = {
 // DATA SOURCES (Appendix A)
 // ─────────────────────────────────────────────────────────────────────────────
 export const DATA_SOURCES = [
-  { source: 'Virtower Operations Data',      date: 'May 2024–March 2026', method: 'ADS-B passive collection',        status: 'VERIFIED',  impact: 'Simulation baseline calibration' },
+  { source: 'Airport Operations Data',      date: 'May 2024–March 2026', method: 'ADS-B passive collection',        status: 'VERIFIED',  impact: 'Simulation baseline calibration' },
   { source: 'Grid Capacity (0.8 MW)',        date: '2026-04-14',          method: 'Airport class estimate',           status: 'ESTIMATED', impact: 'Gate 2 power check — CRITICAL, utility verification required' },
   { source: 'Population Data',              date: '2020',                method: 'US Census Bureau decennial count', status: 'VERIFIED',  impact: 'Demand model population inputs' },
   { source: 'Commute Flow Data',            date: '2021 (latest available)', method: 'LEHD LODES8 Origin-Destination', status: 'CACHED', impact: 'Route demand estimates' },

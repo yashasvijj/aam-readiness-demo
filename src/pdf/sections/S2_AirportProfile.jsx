@@ -90,7 +90,7 @@ export default function S2_AirportProfile({ tier, charts, premium }) {
           {/* 2.3 Operational Baseline */}
           <Text style={S.h2}>2.3 Operational Baseline Analysis</Text>
           <Text style={S.p}>
-            Operations data was collected via Virtower AI Tower System passive ADS-B monitoring
+            Operations data was collected via Airport Operations passive ADS-B monitoring
             over a 22-month period (May 2024 – March 2026), capturing {OPS.totalOps.toLocaleString()} total
             operations. This dataset provides the calibration baseline for the 90-day Monte Carlo
             simulation and demand model.
@@ -116,7 +116,7 @@ export default function S2_AirportProfile({ tier, charts, premium }) {
               src={charts.monthlyOps}
               num={1}
               caption="Monthly Operations Distribution — Keystone Heights Airport (42J), May 2024–March 2026. Peak in March driven by Camp Blanding military training season"
-              source="Virtower AI Tower System — 42J Operations Data"
+              source="Airport Operations — 42J Operations Data"
               height={180}
             />
           )}
@@ -125,7 +125,7 @@ export default function S2_AirportProfile({ tier, charts, premium }) {
             headers={['Metric', 'Value', 'Notes', 'Simulation Impact']}
             flex={[2, 1.2, 2, 2]}
             rows={opsRows}
-            caption="Table 3. Operational Baseline Summary — Keystone Heights Airport (42J). Source: Virtower AI Tower System."
+            caption="Table 3. Operational Baseline Summary — Keystone Heights Airport (42J). Source: Airport Operations."
           />
         </View>
       </Page>
@@ -142,7 +142,7 @@ export default function S2_AirportProfile({ tier, charts, premium }) {
               src={charts.aircraftCategory}
               num={2}
               caption="Aircraft Category Distribution — Keystone Heights Airport (42J), May 2024–March 2026. Military helicopter operations (5.9%) establish VTOL operational precedent"
-              source="Virtower AI Tower System — 42J Operations Data"
+              source="Airport Operations — 42J Operations Data"
               height={200}
             />
           )}
@@ -188,7 +188,7 @@ export default function S2_AirportProfile({ tier, charts, premium }) {
               ['Relationship Type',   AIRPORT.military.relationship],
               ['Ops During Period',   `${OPS.militaryVtol.toLocaleString()} (${((OPS.militaryVtol / OPS.totalOps) * 100).toFixed(1)}% of total)`],
             ]}
-            caption="Table 4. Military VTOL Integration — Camp Blanding JTC Relationship. Source: FAA Form 5010; Virtower Operations Data; USARC LOA records."
+            caption="Table 4. Military VTOL Integration — Camp Blanding JTC Relationship. Source: FAA Form 5010; Airport Operations Data; USARC LOA records."
           />
 
           {!premium && (

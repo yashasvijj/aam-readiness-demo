@@ -10,10 +10,10 @@ const PREMIUM_DATA_SOURCES = [
   {
     source:  'OPS Hourly Pattern',
     date:    'May 2024–March 2026',
-    method:  'Virtower AI Tower System — hour-of-day aggregation',
+    method:  'Airport Operations — hour-of-day aggregation',
     status:  'VERIFIED',
     confidence: 'HIGH',
-    verification: 'No action required — captured from same Virtower dataset as baseline ops',
+    verification: 'No action required — captured from same Airport Operations dataset as baseline ops',
   },
   {
     source:  'Corridor Congestion Index',

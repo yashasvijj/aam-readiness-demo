@@ -57,12 +57,12 @@ function PrelimAirportOverview() {
             ['Utility Provider', `${AIRPORT.utility.provider} — ~${AIRPORT.utility.gridHeadroom} MW estimated`],
             ['Military LOA',   AIRPORT.military.loaStatus],
           ]}
-          caption="Key Airport Parameters — Keystone Heights Airport (42J). Source: FAA Form 5010; Virtower Operations Data."
+          caption="Key Airport Parameters — Keystone Heights Airport (42J). Source: FAA Form 5010; Airport Operations Data."
         />
 
         <UpsellCallout
           title="Standard Report: Full Airport Profile with Infrastructure Inventory"
-          message="The Standard report includes the complete infrastructure inventory, monthly operations charts, aircraft category analysis, and military VTOL operational precedent assessment across 22 months of Virtower data."
+          message="The Standard report includes the complete infrastructure inventory, monthly operations charts, aircraft category analysis, and military VTOL operational precedent assessment across 22 months of Airport Operations data."
         />
       </View>
     </Page>
