@@ -245,6 +245,13 @@ export default function S3_DemandAnalysis({ tier, charts, premium }) {
               height={175}
             />
           )}
+
+          {!premium && (
+            <UpsellCallout
+              title="Premium Report: Full Corridor Analysis"
+              message="The Premium report provides a detailed analysis card for each of the six corridors, covering population catchment, employment anchors, peak demand windows, mode-shift rationale, and growth outlook — plus a 10-year passenger ramp-up chart across all three traffic scenarios."
+            />
+          )}
         </View>
       </Page>
 
@@ -415,18 +422,6 @@ export default function S3_DemandAnalysis({ tier, charts, premium }) {
         </>
       )}
 
-      {!premium && (
-        <Page size="LETTER" style={S.page}>
-          <DocHeader tierLabel={doc.tier} docId={doc.id} />
-          <DocFooter />
-          <View style={S.body}>
-            <UpsellCallout
-              title="Premium Report: Full Corridor Analysis"
-              message="The Premium report provides a detailed analysis card for each of the six corridors, covering population catchment, employment anchors, peak demand windows, mode-shift rationale, and growth outlook — plus a 10-year passenger ramp-up chart across all three traffic scenarios."
-            />
-          </View>
-        </Page>
-      )}
     </>
   );
 }

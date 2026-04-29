@@ -65,6 +65,13 @@ export default function S8_Regulatory({ tier, charts, premium }) {
               </View>
             );
           })}
+
+          {!premium && tier === 'standard' && (
+            <UpsellCallout
+              title="Premium Report: Regulatory Gantt Chart + Action Tracker"
+              message="The Premium report includes a month-by-month regulatory action Gantt aligned to all three implementation phases, with contact details for each FAA office, filing fee schedules, and decision gate checkpoints."
+            />
+          )}
         </View>
       </Page>
 
@@ -157,18 +164,6 @@ export default function S8_Regulatory({ tier, charts, premium }) {
         </Page>
       )}
 
-      {!premium && tier === 'standard' && (
-        <Page size="LETTER" style={S.page}>
-          <DocHeader tierLabel={doc.tier} docId={doc.id} />
-          <DocFooter />
-          <View style={S.body}>
-            <UpsellCallout
-              title="Premium Report: Regulatory Gantt Chart + Action Tracker"
-              message="The Premium report includes a month-by-month regulatory action Gantt aligned to all three implementation phases, with contact details for each FAA office, filing fee schedules, and decision gate checkpoints."
-            />
-          </View>
-        </Page>
-      )}
     </>
   );
 }

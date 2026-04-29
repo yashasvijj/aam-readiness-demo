@@ -46,8 +46,8 @@ export const S = StyleSheet.create({
   page: {
     fontFamily: 'Times-Roman',
     backgroundColor: C.white,
-    paddingTop: 50,
-    paddingBottom: 56,
+    paddingTop: 46,
+    paddingBottom: 50,
   },
 
   // ── COVER PAGE ───────────────────────────────────────────────────────────
@@ -87,9 +87,9 @@ export const S = StyleSheet.create({
   // Score + confidence block
   coverScoreBlock: {
     flexDirection: 'row',
-    padding: '24 40',
+    padding: '16 40',
     borderBottom: `1 solid ${C.border}`,
-    gap: 24,
+    gap: 20,
   },
   coverScoreLeft: {
     width: 160,
@@ -124,7 +124,7 @@ export const S = StyleSheet.create({
   // Key stats bar
   coverStatsBar: {
     flexDirection: 'row',
-    padding: '16 40',
+    padding: '12 40',
     borderBottom: `1 solid ${C.border}`,
   },
   coverStat:    { flex: 1, alignItems: 'center' },
@@ -172,7 +172,7 @@ export const S = StyleSheet.create({
   // ── SECTION BANNER (full-width navy, like ref p17 "6. READINESS SCORE…") ─
   sectionBanner: {
     backgroundColor: C.navy,
-    padding: '10 40',
+    padding: '7 40',
     marginBottom: 0,
   },
   sectionBannerTxt: {
@@ -182,26 +182,26 @@ export const S = StyleSheet.create({
   },
 
   // ── BODY ─────────────────────────────────────────────────────────────────
-  body: { padding: '0 40 20', flex: 1 },
+  body: { padding: '0 40 10', flex: 1 },
 
   // ── TYPOGRAPHY ───────────────────────────────────────────────────────────
   h2: {
     fontSize: 14, fontFamily: 'Helvetica-Bold',
-    color: C.navy, marginTop: 18, marginBottom: 6,
+    color: C.navy, marginTop: 10, marginBottom: 4,
   },
   h3: {
     fontSize: 11, fontFamily: 'Helvetica-Bold',
-    color: C.navy, marginTop: 12, marginBottom: 4,
+    color: C.navy, marginTop: 7, marginBottom: 3,
   },
   p: {
     fontSize: 10, fontFamily: 'Times-Roman',
-    color: C.bodyText, lineHeight: 1.75, marginBottom: 8,
+    color: C.bodyText, lineHeight: 1.5, marginBottom: 5,
     textAlign: 'justify',
   },
   captionItalic: {
     fontSize: 8, fontFamily: 'Times-Italic',
     color: C.mutedText, textAlign: 'center',
-    marginTop: 4, marginBottom: 12,
+    marginTop: 3, marginBottom: 6,
   },
   sectionLabel: {
     fontSize: 8, fontFamily: 'Helvetica-Bold',
@@ -210,19 +210,19 @@ export const S = StyleSheet.create({
   },
   sub: {
     fontSize: 9, color: C.mutedText,
-    fontFamily: 'Times-Italic', marginBottom: 12,
+    fontFamily: 'Times-Italic', marginBottom: 6,
   },
 
   // ── TABLE ────────────────────────────────────────────────────────────────
-  table: { marginTop: 8, marginBottom: 4 },
+  table: { marginTop: 6, marginBottom: 2 },
   tableHead: {
     flexDirection: 'row',
     backgroundColor: C.navy,
-    padding: '6 10',
+    padding: '5 8',
   },
   tableRow: {
     flexDirection: 'row',
-    padding: '6 10',
+    padding: '5 8',
     borderBottom: `1 solid ${C.border}`,
   },
   tableRowAlt:  { backgroundColor: '#EEF2F7' },
@@ -237,7 +237,7 @@ export const S = StyleSheet.create({
   tdMuted: { fontSize: 9, color: C.mutedText, fontStyle: 'italic' },
   tableCaption: {
     fontSize: 8, fontFamily: 'Times-Italic',
-    color: C.mutedText, textAlign: 'center', marginTop: 4, marginBottom: 14,
+    color: C.mutedText, textAlign: 'center', marginTop: 3, marginBottom: 8,
   },
 
   // ── STATUS BADGES ────────────────────────────────────────────────────────
@@ -257,7 +257,7 @@ export const S = StyleSheet.create({
   // ── GATE TABLE ───────────────────────────────────────────────────────────
   gateRow: {
     flexDirection: 'row', alignItems: 'flex-start',
-    paddingVertical: 10, borderBottom: `1 solid ${C.border}`,
+    paddingVertical: 7, borderBottom: `1 solid ${C.border}`,
   },
   gateRowLast: { borderBottom: 0 },
   gateBadge: {
@@ -275,8 +275,8 @@ export const S = StyleSheet.create({
     backgroundColor: C.white,
     border: `1 solid ${C.border}`,
     borderRadius: 4,
-    padding: '14 18',
-    marginBottom: 10,
+    padding: '10 12',
+    marginBottom: 7,
   },
   cardGreen: { borderLeft: `4 solid ${C.green}` },
   cardAmber: { borderLeft: `4 solid ${C.amber}` },
@@ -287,15 +287,15 @@ export const S = StyleSheet.create({
   // ── CALLOUT ──────────────────────────────────────────────────────────────
   callout: {
     backgroundColor: '#f0fdf4', border: `1 solid #86efac`,
-    borderRadius: 4, padding: '10 14', marginTop: 12,
+    borderRadius: 4, padding: '8 12', marginTop: 8,
   },
   calloutAmber: {
     backgroundColor: '#fffbeb', border: `1 solid #fcd34d`,
-    borderRadius: 4, padding: '10 14', marginTop: 10,
+    borderRadius: 4, padding: '8 12', marginTop: 7,
   },
   calloutWarn: {
     backgroundColor: '#fff7ed', border: `1 solid #fed7aa`,
-    borderRadius: 4, padding: '10 14', marginTop: 10,
+    borderRadius: 4, padding: '8 12', marginTop: 7,
   },
   calloutTitle: { fontSize: 9, fontFamily: 'Helvetica-Bold', color: C.greenTxt, marginBottom: 4 },
   calloutTitleAmber: { fontSize: 9, fontFamily: 'Helvetica-Bold', color: C.amberTxt, marginBottom: 4 },
@@ -308,15 +308,15 @@ export const S = StyleSheet.create({
     backgroundColor: C.blueBg,
     border: `1 solid ${C.blue}`,
     borderRadius: 4,
-    padding: '10 14',
-    marginTop: 16,
+    padding: '8 12',
+    marginTop: 10,
   },
   upsellTitle: { fontSize: 9, fontFamily: 'Helvetica-Bold', color: C.blue, marginBottom: 3 },
   upsellTxt:   { fontSize: 9, fontFamily: 'Times-Roman', color: C.blueTxt, lineHeight: 1.65 },
 
   // ── DIVIDER ──────────────────────────────────────────────────────────────
-  divider: { borderBottom: `1 solid ${C.border}`, marginVertical: 14 },
-  dividerNavy: { borderBottom: `2 solid ${C.navy}`, marginVertical: 14 },
+  divider: { borderBottom: `1 solid ${C.border}`, marginVertical: 8 },
+  dividerNavy: { borderBottom: `2 solid ${C.navy}`, marginVertical: 8 },
 
   // ── SCENARIO MATRIX ──────────────────────────────────────────────────────
   matrixColRow:    { flexDirection: 'row', marginBottom: 4, marginLeft: 58 },
@@ -336,7 +336,7 @@ export const S = StyleSheet.create({
   cellGray:  { backgroundColor: '#f1f5f9' },  // n/a / zero
 
   // ── CHART FIGURE ─────────────────────────────────────────────────────────
-  chartFigure:       { marginTop: 10, marginBottom: 4, alignItems: 'center' },
+  chartFigure:       { marginTop: 6, marginBottom: 2, alignItems: 'center' },
   chartFigureImage:  { width: '100%' },
   chartFigureCaption:{ fontSize: 8, fontFamily: 'Times-Italic', color: C.mutedText, textAlign: 'center', marginTop: 4 },
 
@@ -372,10 +372,10 @@ export const S = StyleSheet.create({
   configNote: { fontSize: 7, color: C.amber, marginTop: 2, textAlign: 'center' },
 
   // ── STAT CHIP ROW ────────────────────────────────────────────────────────
-  statRow:  { flexDirection: 'row', marginBottom: 12 },
+  statRow:  { flexDirection: 'row', marginBottom: 8 },
   statChip: {
     flex: 1, backgroundColor: C.light, border: `1 solid ${C.border}`,
-    borderRadius: 4, padding: '9 10', alignItems: 'center', marginRight: 6,
+    borderRadius: 4, padding: '6 8', alignItems: 'center', marginRight: 6,
   },
   statChipLast:  { marginRight: 0 },
   statChipVal:   { fontSize: 15, fontFamily: 'Helvetica-Bold', color: C.navy },
@@ -395,7 +395,7 @@ export const S = StyleSheet.create({
   phaseCapex:  { fontSize: 10, fontFamily: 'Helvetica-Bold', color: C.navy, marginTop: 6, textAlign: 'center' },
 
   // ── METHODOLOGY STEPS ────────────────────────────────────────────────────
-  methodStep:      { flexDirection: 'row', marginBottom: 12 },
+  methodStep:      { flexDirection: 'row', marginBottom: 8 },
   methodNumCircle: {
     width: 22, height: 22, borderRadius: 11,
     backgroundColor: C.navy, alignItems: 'center', justifyContent: 'center',
@@ -409,7 +409,7 @@ export const S = StyleSheet.create({
   bulletText:    { fontSize: 9, fontFamily: 'Times-Roman', color: C.bodyText, lineHeight: 1.6, flex: 1 },
 
   // ── TWO-COLUMN ───────────────────────────────────────────────────────────
-  twoCol: { flexDirection: 'row', gap: 16, marginBottom: 10 },
+  twoCol: { flexDirection: 'row', gap: 12, marginBottom: 7 },
   col:    { flex: 1 },
 
 });

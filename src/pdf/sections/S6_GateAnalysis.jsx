@@ -47,7 +47,6 @@ function GateCheck({ chk, idx, last, premium }) {
       style={[
         S.gateRow,
         last ? S.gateRowLast : {},
-        { paddingVertical: 10 },
       ]}
       wrap={false}
     >
