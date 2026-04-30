@@ -69,7 +69,7 @@ export const AIRPORT = {
     facility:  'Camp Blanding Joint Training Center',
     distanceMi: 28,
     bearing:   'NE',
-    aircraftTypes: ['UH-60 Black Hawk', 'CH-47 Chinook', 'AH-64 Apache'],
+    aircraftTypes: ['UH-60 Black Hawk'],
     relationship: 'Active LOA with USARC for periodic rotary-wing training operations',
     loaStatus:  'Active — renewed 2024',
   },
