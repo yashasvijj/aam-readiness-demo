@@ -13,6 +13,7 @@
 
 import chartToImage from './chartToImage';
 import { CHART_CONFIGS } from '../../data/chartConfigs';
+import { SIM } from '../../data/reportData';
 
 // Chart dimensions for each key (width × height in logical px)
 const DIMENSIONS = {
@@ -79,11 +80,14 @@ export default async function generateCharts(tier, onProgress) {
   const result = {};
   let done = 0;
 
+  const runs = SIM.runsByTier[tier] ?? 200;
+
   for (const key of keys) {
     const configFn = CHART_CONFIGS[key];
     if (!configFn) continue;
     const [w, h] = DIMENSIONS[key] ?? [520, 260];
-    result[key] = await chartToImage(configFn(), w, h);
+    const config = key === 'monteCarlo' ? configFn(runs) : configFn();
+    result[key] = await chartToImage(config, w, h);
     done++;
     onProgress?.(done, keys.length);
   }

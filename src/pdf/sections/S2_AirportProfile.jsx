@@ -161,8 +161,7 @@ export default function S2_AirportProfile({ tier, charts, premium }) {
             <Text style={S.h3}>Why Military VTOL Matters for AAM</Text>
             <Text style={[S.p, { marginBottom: 4 }]}>
               Military helicopter operations at 42J demonstrate that the airport has already managed
-              VTOL operations at scale under FAA oversight — including UH-60 Black Hawk, CH-47
-              Chinook, and AH-64 Apache operations. This establishes:
+              VTOL operations at scale under FAA oversight — including UH-60 Black Hawk operations. This establishes:
             </Text>
             {[
               'Existing operational familiarity with VTOL approach and departure procedures at 42J.',

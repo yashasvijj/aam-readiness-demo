@@ -239,7 +239,7 @@ export function avgTatConfig() {
 }
 
 // ─── Figure 7: Monte Carlo Distribution — Optimal Scenario ───────────────────
-export function monteCarloConfig() {
+export function monteCarloConfig(runs = 200) {
   // Simulate a normal distribution around mean=93.2, std~2.5
   const bins   = [85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100];
   const counts = [1, 2, 4, 8,14,20,26,30,28,22,18,12, 8, 4, 2, 1];
@@ -259,7 +259,7 @@ export function monteCarloConfig() {
       ...BASE_OPTIONS,
       plugins: {
         ...BASE_OPTIONS.plugins,
-        title: { display: true, text: 'Monte Carlo Score Distribution — Optimal Scenario (90-day window)', font: { ...BASE_FONT, size: 13, weight: 'bold' }, color: FAA.navy },
+        title: { display: true, text: `Monte Carlo Score Distribution — Optimal Scenario (${runs} runs, 90-day window)`, font: { ...BASE_FONT, size: 13, weight: 'bold' }, color: FAA.navy },
         legend: { display: false },
       },
       scales: {
