@@ -139,7 +139,7 @@ function PrelimInfraSimHighlights() {
         <Text style={S.h2}>5.1 Simulation — Key Results</Text>
         <Text style={S.p}>
           The 90-day Monte Carlo simulation tested nine demand and infrastructure combinations.
-          Five of nine scenarios passed both safety and power gates. The optimal configuration —
+          Four of nine scenarios passed both safety and power gates. The optimal configuration —
           Medium Traffic + Vertiport — achieved a Readiness Index of 93/100 (95% CI: 88.2–98.2)
           with 100% throughput and zero queue events.
         </Text>

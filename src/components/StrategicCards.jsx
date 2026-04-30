@@ -6,7 +6,7 @@ export default function StrategicCards() {
         <div>
           <h3>Unique Strategic Advantage</h3>
           <p>
-            42J's 2,953 military helicopter operations — including H60 Black Hawks and H47 Chinooks —
+            42J's 2,953 military helicopter operations — including H60 Black Hawks —
             show the airport already manages VTOL-class aircraft harder to integrate than eVTOL.
             Adjacent Camp Blanding JTC creates a rare civil-military dual-use opportunity that could
             qualify for DoD co-investment under OTA mechanisms.

@@ -775,7 +775,7 @@ export const SUMMARY = {
   scoreCI:         '95% CI: 88.2 — 98.2',
   verdict:         'OPTIMAL',
   optimalConfig:   'Vertiport + Medium eVTOL Traffic',
-  scenariosPassing: 5,
+  scenariosPassing: 4,
   scenariosTotal:  9,
 
   confidence: {
@@ -796,8 +796,8 @@ export const SUMMARY = {
     'Military VTOL Integration Precedent Established: 2,953 military helicopter operations during the assessment period — approximately 78% of comparable general aviation facilities in the peer reference group.',
     'Optimal Configuration — Vertiport + Medium eVTOL Traffic: A Vertiport (4 landing pads) achieves a Readiness Index of 93/100 with 100% throughput efficiency and zero queue events across the 90-day simulation.',
     'Grid Upgrade Required — Primary Capital Barrier: The primary capital investment is a +0.3 MW grid distribution line upgrade estimated at $1.05M. Utility verification is recommended before federal grant submission.',
-    'Finding 4 — Jacksonville SW Corridor: Demand modelling identifies Jacksonville SW Corridor as the highest-value eVTOL corridor from 42J. This market alone supports the medium-tier adoption projection at maturity.',
-    'Finding 5 — Vertihub Not Ready: All 8-pad Vertihub scenarios fail Gate 1 due to ARFF requirements exceeding current capability. This protects 42J from a $10M+ premature over-build.',
+    'Jacksonville SW Corridor: Demand modelling identifies Jacksonville SW Corridor as the highest-value eVTOL corridor from 42J. This market alone supports the medium-tier adoption projection at maturity.',
+    'Vertihub Not Ready: All 8-pad Vertihub scenarios fail Gate 1 due to ARFF requirements exceeding current capability. This protects 42J from a $10M+ premature over-build.',
   ],
 };
 
