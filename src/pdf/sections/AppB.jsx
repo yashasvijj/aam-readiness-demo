@@ -73,7 +73,7 @@ export default function AppB({ tier }) {
           rows={[
             ['Simulation framework',  'Discrete-event simulation'],
             ['Simulation window',     '90 days per scenario run'],
-            ['Monte Carlo runs',      `${SIM.optimal.runs} runs per scenario`],
+            ['Monte Carlo runs',      `${SIM.runsByTier[tier]} runs per scenario`],
             ['Scenarios modelled',    '9 (3 traffic tiers × 3 infrastructure tiers)'],
             ['Traffic tiers',        'Low (0.8%), Medium (2.5%), High (5.8%) market adoption'],
             ['Infrastructure tiers', 'Vertistop (2 pads), Vertiport (4 pads), Vertihub (8 pads)'],

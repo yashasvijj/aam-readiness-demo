@@ -53,7 +53,7 @@ const STEPS = [
     color: '#7c3aed',
     bg: '#f5f3ff',
     title: 'Run a 90-day discrete-event simulation',
-    body: 'Execute 200 Monte Carlo runs per scenario across a 3 × 3 matrix of infrastructure tiers (Vertistop / Vertiport / Vertihub) and traffic levels.',
+    body: 'Execute up to 500 Monte Carlo runs per scenario across a 3 × 3 matrix of infrastructure tiers (Vertistop / Vertiport / Vertihub) and traffic levels.',
     tag: 'SimPy Simulation',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">

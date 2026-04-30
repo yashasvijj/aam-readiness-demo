@@ -397,8 +397,10 @@ export const INFRA = {
 // 90-DAY SIMULATION RESULTS
 // ─────────────────────────────────────────────────────────────────────────────
 export const SIM = {
+  runsByTier: { preliminary: 100, standard: 200, premium: 500 },
+
   methodology: {
-    approach: 'Discrete-event simulation using SimPy framework, 90-day window, 200 Monte Carlo runs per scenario.',
+    approach: (runs) => `Discrete-event simulation using SimPy framework, 90-day window, ${runs} Monte Carlo runs per scenario.`,
     conditions: 'Each run incorporates stochastic arrival variability calibrated to 42J baseline traffic, seasonal demand factors, pad availability, and weather-driven hold events.',
     outputs: 'Throughput rate (% of scheduled ops completed), average turnaround time (TAT), peak queue depth, and system resiliency score.',
     plainLanguage: 'The simulation asks: if eVTOL aircraft start operating at 42J under each of nine demand and infrastructure combinations, how well does the airport cope over a 90-day period? It models realistic variations in weather, passenger demand, charging availability, and equipment reliability to give airport planners a statistically robust answer rather than a single-point estimate.',
@@ -413,14 +415,13 @@ export const SIM = {
     'med-hi': { title: 'Medium Traffic + Vertihub', throughput: 100.0, avgTat: 22.3, queue: 0.0,  resil: 100.0, gate1: false, gate2: null,  score: 0,  verdict: 'NOT READY', ci: [0, 0]   },
     'hi-lo':  { title: 'High Traffic + Vertistop',  throughput: 78.9,  avgTat: 33.0, queue: 28.6, resil: 100.0, gate1: false, gate2: true,  score: 0,  verdict: 'NOT READY', ci: [0, 0]   },
     'hi-med': { title: 'High Traffic + Vertiport',  throughput: 99.1,  avgTat: 26.0, queue: 19.8, resil: 95.3,  gate1: false, gate2: true,  score: 0,  verdict: 'NOT READY', ci: [0, 0]   },
-    'hi-hi':  { title: 'High Traffic + Vertihub',   throughput: 100.0, avgTat: 22.3, queue: 0.0,  resil: 100.0, gate1: false, gate2: null,  score: 55, verdict: 'CONDITIONAL',ci: [48, 62] },
+    'hi-hi':  { title: 'High Traffic + Vertihub',   throughput: 100.0, avgTat: 22.3, queue: 0.0,  resil: 100.0, gate1: false, gate2: null,  score: 0,  verdict: 'NOT READY',  ci: [0, 0]   },
   },
 
   optimal: {
     key:   'med-med',
     mean:  93.2,
     ci95:  [88.2, 98.2],
-    runs:  200,
   },
 
   // Average TAT by tier and traffic (for bar chart)
@@ -787,7 +788,7 @@ export const SUMMARY = {
     { val: '50,236', lbl: 'Baseline Operations' },
     { val: '2,953',  lbl: 'Military VTOL Ops' },
     { val: '74',     lbl: 'Avg Daily Ops' },
-    { val: '5/9',    lbl: 'Scenarios Passing' },
+    { val: '4/9',    lbl: 'Scenarios Passing' },
     { val: '337',    lbl: 'Peak Day Ops' },
   ],
 

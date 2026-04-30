@@ -96,7 +96,7 @@ export default function S6_GateAnalysis({ tier, charts, premium }) {
               { val: `${SIM.optimal.mean}/100`, lbl: 'Readiness Index', color: C.navy },
               { val: `${SIM.optimal.ci95[0]}–${SIM.optimal.ci95[1]}`, lbl: '95% CI', color: C.blue },
               { val: `${SIM.scenarios['med-med'].throughput}%`, lbl: 'Throughput (Optimal)', color: C.green },
-              { val: '5/9', lbl: 'Scenarios Passing', color: C.amber },
+              { val: '4/9', lbl: 'Scenarios Passing', color: C.amber },
             ].map((s, i, arr) => (
               <View key={i} style={[S.statChip, i === arr.length - 1 ? S.statChipLast : {}]}>
                 <Text style={[S.statChipVal, { color: s.color }]}>{s.val}</Text>
@@ -182,7 +182,7 @@ export default function S6_GateAnalysis({ tier, charts, premium }) {
             <ChartFigure
               src={charts.ciComparison}
               num="P6"
-              caption="95% Confidence Intervals — Passing Scenario Readiness Scores. 200 Monte Carlo runs per scenario. Source: AAM Readiness System simulation."
+              caption={`95% Confidence Intervals — Passing Scenario Readiness Scores. ${SIM.runsByTier[tier]} Monte Carlo runs per scenario. Source: AAM Readiness System simulation.`}
               height={165}
             />
           )}

@@ -53,7 +53,7 @@ export default function S5_Simulation({ tier, charts, premium }) {
               <View style={[S.card, S.cardBlue]}>
                 <Text style={S.h3}>Technical Approach</Text>
                 {[
-                  SIM.methodology.approach,
+                  SIM.methodology.approach(SIM.runsByTier[tier]),
                   SIM.methodology.conditions,
                 ].map((t, i) => (
                   <View key={i} style={[S.methodBullet, { marginBottom: 4 }]}>
@@ -84,7 +84,7 @@ export default function S5_Simulation({ tier, charts, premium }) {
           {/* 5.2 Scenario Matrix — full JSX heatmap */}
           <Text style={S.h2}>5.2 Nine-Scenario Results Matrix</Text>
           <Text style={[S.sub, { marginBottom: 8 }]}>
-            3 traffic tiers × 3 infrastructure tiers · {SIM.optimal.runs} Monte Carlo runs each · 90-day window
+            3 traffic tiers × 3 infrastructure tiers · {SIM.runsByTier[tier]} Monte Carlo runs each · 90-day window
           </Text>
 
           {/* Column headers (Infrastructure tiers) */}
@@ -176,7 +176,7 @@ export default function S5_Simulation({ tier, charts, premium }) {
               s.verdict,
             ])}
             statusCols={[6]}
-            caption="Table 13. Complete Scenario Simulation Results — Keystone Heights Airport (42J). Source: AAM Readiness System 90-day discrete-event simulation, 200 Monte Carlo runs."
+            caption={`Table 13. Complete Scenario Simulation Results — Keystone Heights Airport (42J). Source: AAM Readiness System 90-day discrete-event simulation, ${SIM.runsByTier[tier]} Monte Carlo runs.`}
           />
 
           {!premium && (

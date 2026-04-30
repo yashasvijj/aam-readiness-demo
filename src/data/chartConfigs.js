@@ -259,7 +259,7 @@ export function monteCarloConfig() {
       ...BASE_OPTIONS,
       plugins: {
         ...BASE_OPTIONS.plugins,
-        title: { display: true, text: 'Monte Carlo Score Distribution — Optimal Scenario (200 runs, 90 days each)', font: { ...BASE_FONT, size: 13, weight: 'bold' }, color: FAA.navy },
+        title: { display: true, text: 'Monte Carlo Score Distribution — Optimal Scenario (90-day window)', font: { ...BASE_FONT, size: 13, weight: 'bold' }, color: FAA.navy },
         legend: { display: false },
       },
       scales: {

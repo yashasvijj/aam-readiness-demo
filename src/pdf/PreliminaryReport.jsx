@@ -152,7 +152,7 @@ function PrelimInfraSimHighlights() {
             ['Low Traffic + Vertiport',    '88/100',  '100%', 'READY'],
             ['Medium Traffic + Vertistop', '89/100',  '100%', 'READY'],
             ['Medium Traffic + Vertiport', '93/100',  '100%', 'OPTIMAL ★'],
-            ['High Traffic + Vertihub',    '55/100',  '100%', 'CONDITIONAL'],
+            ['High Traffic + Vertihub',    '—',       '100%', 'NOT READY'],
             ['All Vertihub (other)',       '—',        '—',    'NOT READY'],
             ['High Traffic + Vertistop',   '—',        '78.9%','NOT READY'],
             ['High Traffic + Vertiport',   '—',        '99.1%','NOT READY'],
@@ -184,7 +184,7 @@ function PrelimGateScore() {
           {[
             { val: '93/100',        lbl: 'Readiness Index',      color: C.navy },
             { val: '88.2–98.2',     lbl: '95% CI',               color: C.blue },
-            { val: '5/9',           lbl: 'Scenarios Passing',    color: C.amber },
+            { val: '4/9',           lbl: 'Scenarios Passing',    color: C.amber },
             { val: 'OPTIMAL',       lbl: 'Verdict',              color: C.green },
           ].map((s, i, arr) => (
             <View key={i} style={[S.statChip, i === arr.length - 1 ? S.statChipLast : {}]}>

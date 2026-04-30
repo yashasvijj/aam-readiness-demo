@@ -13,7 +13,7 @@
 
 import { Page, View, Text } from '@react-pdf/renderer';
 import { S, C } from './styles';
-import { DOC, SUMMARY, AIRPORT } from '../data/reportData';
+import { DOC, SUMMARY, AIRPORT, SIM } from '../data/reportData';
 
 const today = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
@@ -46,7 +46,7 @@ export default function CoverPage({ tier }) {
         <Text style={S.coverHeroMeta}>
           Assessment Date: {today} · Document No.: {doc.id}
           {'\n'}
-          90-Day Monte Carlo Simulation · {SUMMARY.optimal?.runs ?? 200} Runs · 9 Infrastructure-Traffic Scenarios
+          90-Day Monte Carlo Simulation · {SIM.runsByTier[tier]} Runs · 9 Infrastructure-Traffic Scenarios
         </Text>
 
         {/* Tier badge */}

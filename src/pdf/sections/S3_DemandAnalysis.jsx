@@ -76,23 +76,24 @@ export default function S3_DemandAnalysis({ tier, charts, premium }) {
           {/* Mathematical Framework box */}
           <Text style={S.h3}>Mathematical Framework</Text>
           <FormulaBlock>
-            <FormulaLine>Multinomial Logit Mode-Choice Model (Ben-Akiva & Lerman, 1985)</FormulaLine>
+            <FormulaLine>Multinomial Logit Mode-Choice Model (Ben-Akiva &amp; Lerman, 1985)</FormulaLine>
             <FormulaLine indent={0}>{' '}</FormulaLine>
             <FormulaLine>Corridor attractiveness index:</FormulaLine>
-            <FormulaLine indent={1}>A_c = w₁·(PopDensity_c) + w₂·(EmpDensity_c)</FormulaLine>
-            <FormulaLine indent={2}>+ w₃·(CommuteFlow_c) + w₄·max(0, ΔT_c)</FormulaLine>
+            <FormulaLine indent={1}>A_c = w1*(PopDensity_c) + w2*(EmpDensity_c)</FormulaLine>
+            <FormulaLine indent={2}>+ w3*(CommuteFlow_c) + w4*max(0, dT_c)</FormulaLine>
             <FormulaLine indent={0}>{' '}</FormulaLine>
             <FormulaLine>Utility functions:</FormulaLine>
-            <FormulaLine indent={1}>V_eVTOL = β₁·(−fare_c) + β₂·(−evtol_time_c) + β₃·(A_c) + β₄·(congestion_c)</FormulaLine>
-            <FormulaLine indent={1}>V_auto  = β₁·(−auto_cost_c) + β₂·(−drive_time_c) + β₅·(parking_cost)</FormulaLine>
+            <FormulaLine indent={1}>V_eVTOL = b1*(-fare_c) + b2*(-evtol_time_c)</FormulaLine>
+            <FormulaLine indent={2}>+ b3*(A_c) + b4*(congestion_c)</FormulaLine>
+            <FormulaLine indent={1}>V_auto  = b1*(-auto_cost_c) + b2*(-drive_time_c) + b5*(parking_cost)</FormulaLine>
             <FormulaLine indent={0}>{' '}</FormulaLine>
             <FormulaLine>Mode shift probability:</FormulaLine>
             <FormulaLine indent={1}>P(eVTOL | c) = exp(V_eVTOL) / [exp(V_eVTOL) + exp(V_auto)]</FormulaLine>
             <FormulaLine indent={0}>{' '}</FormulaLine>
             <FormulaLine>Annual demand:</FormulaLine>
-            <FormulaLine indent={1}>Annual_pax_c = CommuteFlow_c × P(eVTOL | c) × 365 × load_factor</FormulaLine>
+            <FormulaLine indent={1}>Annual_pax_c = CommuteFlow_c x P(eVTOL | c) x 365 x load_factor</FormulaLine>
             <FormulaNote>
-              β coefficient values are proprietary calibration parameters maintained by the AAM Readiness System.
+              b1-b5 are proprietary calibration coefficients maintained by the AAM Readiness System.
               The model structure follows standard transportation demand modelling practice (USDOT, 2024).
               VoT calibration: $21.10/hour personal travel (USDOT Revised Departmental Guidance 2024).
             </FormulaNote>
@@ -175,7 +176,7 @@ export default function S3_DemandAnalysis({ tier, charts, premium }) {
             const jax = DEMAND.corridors.find(c => c.primary);
             const rationale = CORRIDOR_RATIONALE[jax?.destination];
             return jax ? (
-              <View style={[S.card, S.cardNavy]} wrap={false}>
+              <View style={[S.card, S.cardNavy]}>
                 <Text style={S.h3}>Primary Corridor: {jax.destination}</Text>
                 <View style={S.twoCol}>
                   <View style={S.col}>
@@ -326,7 +327,7 @@ export default function S3_DemandAnalysis({ tier, charts, premium }) {
                 const rat = CORRIDOR_RATIONALE[c.destination];
                 if (!rat) return null;
                 return (
-                  <View key={i} style={[S.card, i === 0 ? S.cardNavy : i === 1 ? S.cardBlue : S.cardGreen]} wrap={false}>
+                  <View key={i} style={[S.card, i === 0 ? S.cardNavy : i === 1 ? S.cardBlue : S.cardGreen]}>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 6 }}>
                       <Text style={S.h3}>{c.destination}</Text>
                       <View style={[S.badge, i === 0 ? S.badgePass : S.badgeCond]}>
@@ -374,7 +375,7 @@ export default function S3_DemandAnalysis({ tier, charts, premium }) {
                 const rat = CORRIDOR_RATIONALE[c.destination];
                 if (!rat) return null;
                 return (
-                  <View key={i} style={[S.card, S.cardBlue]} wrap={false}>
+                  <View key={i} style={[S.card, S.cardBlue]}>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 6 }}>
                       <Text style={S.h3}>{c.destination}</Text>
                       <View style={[S.badge, S.badgeCond]}>
