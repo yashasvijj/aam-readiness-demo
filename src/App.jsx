@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { supabase } from './lib/supabase';
+import LoginGate from './components/LoginGate';
 import LandingPage from './components/LandingPage';
 import UploadGate from './components/UploadGate';
 import LoadingScreen from './components/LoadingScreen';
@@ -14,9 +16,38 @@ import ResourceScaling from './components/ResourceScaling';
 import StrategicCards from './components/StrategicCards';
 import Footer from './components/Footer';
 
-// Four views: 'landing' → 'upload' → 'loading' → 'dashboard'
+// Five views: 'init' → 'login' → 'landing' → 'upload' → 'loading' → 'dashboard'
 export default function App() {
+  const [session, setSession] = useState(null);
+  const [authReady, setAuthReady] = useState(false);
   const [view, setView] = useState('landing');
+
+  // Restore session on mount and listen for auth changes
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setAuthReady(true);
+    });
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  async function handleLogout() {
+    await supabase.auth.signOut();
+    setView('landing');
+  }
+
+  // Wait for Supabase to restore session before rendering anything
+  if (!authReady) return null;
+
+  // Not authenticated — show login gate
+  if (!session) {
+    return <LoginGate onLogin={() => setView('landing')} />;
+  }
 
   if (view === 'landing') {
     return <LandingPage onEnter={() => setView('upload')} />;
@@ -32,7 +63,7 @@ export default function App() {
 
   return (
     <>
-      <Header onHome={() => setView('landing')} />
+      <Header onHome={() => setView('landing')} onLogout={handleLogout} />
       <Hero />
       <StatsBar />
       <main>

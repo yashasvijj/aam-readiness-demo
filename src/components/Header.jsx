@@ -2,7 +2,7 @@ import ExportButton from './ExportButton';
 
 const today = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
-export default function Header({ onHome }) {
+export default function Header({ onHome, onLogout }) {
   return (
     <header>
       <div className="header-left">
@@ -16,6 +16,11 @@ export default function Header({ onHome }) {
           Assessment for <strong>Keystone Heights Airport (42J)</strong> · {today}
         </div>
         <ExportButton />
+        {onLogout && (
+          <button className="logout-btn" onClick={onLogout} title="Sign out">
+            Sign out
+          </button>
+        )}
       </div>
     </header>
   );

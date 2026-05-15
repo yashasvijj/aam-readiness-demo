@@ -1050,4 +1050,206 @@ footer { text-align: center; padding: 32px 48px; font-size: 12px; color: var(--m
   font-size: 13px;
 }
 .lp-footer-sep  { color: var(--border); }
+
+/* ── Login Gate ───────────────────────────────────────────────── */
+.lg-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f2744 100%);
+  padding: 24px;
+}
+
+.lg-card {
+  background: white;
+  border-radius: 20px;
+  padding: 48px 44px 40px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+}
+
+.lg-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.lg-plane {
+  width: 28px;
+  height: 28px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.lg-product {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+}
+
+.lg-tagline {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin-top: 2px;
+}
+
+.lg-heading {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.lg-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.lg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.lg-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lg-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.04em;
+}
+
+.lg-input {
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--navy);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+}
+.lg-input::placeholder { color: #94a3b8; }
+.lg-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+}
+
+.lg-pass-wrap {
+  position: relative;
+}
+.lg-pass-input {
+  padding-right: 44px;
+}
+.lg-pass-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+.lg-pass-toggle:hover { color: var(--navy); }
+
+.lg-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  font-size: 13px;
+  color: #dc2626;
+}
+
+.lg-submit {
+  width: 100%;
+  padding: 14px;
+  border-radius: 11px;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: not-allowed;
+  background: #f1f5f9;
+  color: #94a3b8;
+  transition: background 0.2s, color 0.2s, transform 0.1s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  margin-top: 4px;
+}
+.lg-submit-ready {
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 4px 16px rgba(99,102,241,0.35);
+}
+.lg-submit-ready:hover {
+  background: #4f46e5;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(99,102,241,0.4);
+}
+
+@keyframes lg-spin { to { transform: rotate(360deg); } }
+.lg-spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: lg-spin 0.7s linear infinite;
+}
+
+.lg-footer-note {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+.lg-contact-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.lg-contact-link:hover { text-decoration: underline; }
+
+/* ── Header logout button ─────────────────────────────────────── */
+.logout-btn {
+  background: none;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--muted);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.logout-btn:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+}
 .lp-footer-note { color: var(--muted); }
